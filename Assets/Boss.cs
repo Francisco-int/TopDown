@@ -23,7 +23,6 @@ public class Boss : MonoBehaviour
     [SerializeField] Text pressRToRestart;
     bool restartAble;
     [SerializeField] Text winText;
-    int currentHealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -99,10 +98,10 @@ public class Boss : MonoBehaviour
     }
      void TakeDamage(int amount)
     {
-        currentHealth -= amount;
+        vida -= amount;
 
 
-        if (currentHealth <= 0)
+        if (vida <= 0)
         {
             Defeat();
         }
